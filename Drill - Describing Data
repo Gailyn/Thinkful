@@ -1,0 +1,49 @@
+1) 14+12+11+10+8+8+6 = 69 
+  mean = 9.86
+  median = 10
+  mode = 8
+
+  df = pd.DataFrame()
+  df['ages'] = [14, 12, 11, 10, 8, 8, 6]
+  np.var(df.ages)
+  variance = 6.408
+
+  np.std(df.ages)
+  standard deviation = 2.531435020952764
+
+  np.std(df['ages'] ,ddof=1) / np.sqrt(len(df['ages']))
+  standard error = 1.03
+
+2)  I would use the mean and the standard deviation to describe the data. The sample is small so the outliers have a greater 
+  impact on the variance. The data has a normal distruitbution so the mean and the standard deviation would fairly
+  explain the majority of the data. 
+
+
+3) 14+12+11+10+8+8+7 = 70
+  mean = 10
+  median = 10
+  mode = 8
+
+  df = pd.DataFrame()
+  df['ages'] = [14, 12, 11, 10, 8, 8, 7]
+  np.var(df.ages)
+  variance = 5.408
+
+  np.std(df.ages)
+  standard deviation = 2.32
+
+  np.std(df['ages'] ,ddof=1) / np.sqrt(len(df['ages']))
+  standard error = .95 
+
+  The mean increased
+  the variance decreased
+  standard deviation decreased
+  standard error decreased 
+
+
+4) Changing the age of 8 to 1 creates drastic change in the variance, standard error, and mean value.
+I would use the mean and standard deviation.
+
+5) I would guess 20% of people were fans, an average of the popular magazine samples. 
+I  excluded the sci-fi magazine as that would have a high sample bias. 
+
