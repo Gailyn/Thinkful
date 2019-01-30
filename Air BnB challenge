@@ -1,0 +1,96 @@
+-- The most expensive listing is the $10,000 Full House Victorian, it is  7500 SqFt and includes 4 Floors and a Hot Tub. 
+-- it is in the Western Addition Neighborhood and includes the entire home. It is in the same neighborhood as one of the cheapest listings as well. 
+SELECT 
+	name AS house_name, 
+	neighbourhood, 
+	room_type,
+	price
+FROM 
+	sfo_listings
+ORDER BY
+	price DESC;
+
+
+-- The five most popular neighboorhoods seem to be South of Market, Downtown/Civic Center, Chinatown, Mission, Nob Hill, 
+and Western Addition 
+
+SELECT
+	neighbourhood,
+	COUNT(neighbourhood) AS amount_of_listings, 
+	AVG(number_of_reviews) AS average_num_of_reviews,
+	COUNT(neighbourhood)/AVG(number_of_reviews) AS pop
+FROM
+	sfo_listings
+GROUP BY 
+	1
+ORDER BY
+	 pop DESC;
+   
+
+
+-- In 2018, busiest time in San Fransico was the beginning of the year, or the first few days of january 
+-- In 2019 the busiest or time with the greatest amount of bookings seems to be the beginning of march 
+
+WITH 
+	busy_places
+AS(
+ SELECT
+    sfo_calendar.listing_id,
+   	sfo_calendar.calender_date,
+	sfo_calendar.available,
+	sfo_calendar.price,
+    sfo_listings.id,
+    sfo_listings.neighbourhood 
+FROM
+    sfo_listings 
+JOIN
+    sfo_calendar
+ON
+    sfo_listings.id = sfo_calendar.listing_id
+)
+
+	SELECT 
+		calender_date,
+		COUNT(available) as pop
+	from 
+		busy_places
+	WHERE 
+		available LIKE 't'
+	GROUP BY 
+		1
+	ORDER BY
+		pop DESC;
+    
+    
+-- The day with the lowest average booking price was 2019-01-07 which may suggest that a week within the new year
+-- may be the cheapest time to book in San Fransico 
+
+WITH 
+	busy_places
+AS(
+ SELECT
+    sfo_calendar.listing_id,
+   	sfo_calendar.calender_date,
+	sfo_calendar.available,
+    sfo_listings.id,
+	sfo_listings.price,
+    sfo_listings.neighbourhood 
+FROM
+    sfo_listings 
+JOIN
+    sfo_calendar
+ON
+    sfo_listings.id = sfo_calendar.listing_id
+)
+
+	SELECT 
+		calender_date,
+		AVG(price) as avg_price
+	from 
+		busy_places
+	WHERE 
+		available LIKE 't'
+	GROUP BY 
+		1
+	ORDER BY
+		 avg_price ASC;
