@@ -1,0 +1,22 @@
+The Sith Lords are concerned that their recruiting slogan, "Give In to Your Anger," isn't very effective. Darth Vader develops an alternative slogan, "Together We Can Rule the Galaxy." They compare the slogans on two groups of 50 captured droids each. In one group, Emperor Palpatine delivers the "Anger" slogan. In the other, Darth Vader presents the "Together" slogan. 20 droids convert to the Dark Side after hearing Palpatine's slogan, while only 5 droids convert after hearing Vader's. The Sith's data scientist concludes that "Anger" is a more effective slogan and should continue to be used.
+
+
+
+Research Proposal 
+
+  The Problem 
+     When trying to move people to action, like recrutment to a campaign,  the correct messaging is important and can make or      break your efforts. Discovering what reaches an audience can be difficult. How do you find out which message is more           effective to increase recruitment? 
+  
+  The Potential Solution
+      Upon finding the more effective slogan, there will be a greater conversion rate among droids. 
+  
+  
+  The Method of testing the solution    
+   - Every month for 6 months gather 100 prisoners and randomly split half into two groups of 50. 
+   - Have one person (Emperor Palpatine) deliver slogan 1 (Together we can Rule the Galaxy) to group 1 and deliver slogan 2        (Give into your anger) to group 2
+   - Measure conversion rate and time before conversion between the two groups for 6 months 
+   
+   
+   If more conversions result for slogan 1, we can conclude that slogan 1 is the more effective slogan. It more conversions       result for slogan 2 we can conclude that slogan 2 is more effective. 
+   
+   
