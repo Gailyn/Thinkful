@@ -1,0 +1,12 @@
+Cntry: categorical
+Year: categorical
+Idno:categorical  
+Tvtot: categorical
+Ppltrust: categorical
+Pplhlp: categorical	
+Happy: categorical 	
+Sclmeet: categorical 
+Sclact: categorical 
+Gndr: categorical 
+Agea: continuous interval 
+Partner: categorical
